@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}Employee Management System{% endblock title %} 
+
+{% block body %} 
+
+  <div class="container">
+          <h1>Office Employee Management System!</h1>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">        
+            <a class="btn btn-primary" href="/">Logout</a>
+          </div>
+      <hr>
+      <a class="btn btn-primary" href="/details/all_emp" role="button">View All Employee</a>
+      <a class="btn btn-primary" href="/details/add_emp" role="button">Add An Employee</a>
+      <a class="btn btn-primary" href="/details/remove_emp" role="button">Remove An Employee</a>
+      <a class="btn btn-primary" href="/details/filter_emp" role="button">Filter Employee Details</a>
+
+
+      
+
+
+  </div>
+{% endblock body %} 
+
+
+
+<div>
+  <h3>NOTE:</h3>
+  <h5>Login Credentials</h5>
+  <p><b>Email: </b> root@gmail.com</p>
+  <p><b>Password: </b> root</p>
+
+</div> 

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock title %}
+
+
+{% block body %}
+
+<div class="row">
+    <div class="col-lg-3">
+
+    </div>
+    <div class="col-lg-6 p-4">
+        <div class="card bg-light p-4">
+            {% for message in messages %}
+            <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+              <strong>{{message}}</strong> 
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        
+            <h3 class="text-dark">Login</h3>
+                <form action="/details/index/" method="post">{% csrf_token %}
+                    <label for="email">Email</label>
+                    <div class="form-group">
+                        <input type="email" class="form-control p-2" id="email" name="email" required>
+                    </div>
+                    <label for="pass1">Password</label>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="pass1" name="pass1" required>
+                    </div> 
+                    
+                    <br>
+                    <button type="submit" class="btn btn-dark">LogIn</button>
+                    
+                </form>   
+        </div>  
+        <div class="p-4" style="text-align: center;">
+            <h3>NOTE:</h3>
+            <h5>Login Credentials</h5>
+            <p><b>Email: </b> root@gmail.com</p>
+            <p><b>Password: </b> root</p>
+          
+          </div> 
+    </div>
+</div>
+<div class="col-lg-3">
+
+</div>
+
+{% endblock body %}
+
+
